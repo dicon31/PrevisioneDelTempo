@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsioni del tempo</title>
+    <script src="./weather-openApi.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h3, h5 {
+            text-align: center;
+            color: #333;
+        }
+        h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        h5 {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        input[type="text"], select {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-top: 20px;
+        }
+        #result {
+            margin-top: 30px;
+        }
+        table {
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Previsioni del tempo</h3>
+        <h5>Immetti il nome della città e la nazione di appartenenza. Premi invia per vedere i risultati</h5>
+
+        <form id="form">
+            <div class="form-group">
+                <input type="text" id="inputCitta" placeholder="Città" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <select id="selectCitta" class="form-select">
+                    <option value="" selected>Scegli una nazione</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Invia</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
+
+        <div id="result"><!-- Qui appariranno le previsioni del tempo --></div>
+    </div>
+    
+</body>
+</html>
